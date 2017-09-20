@@ -1,0 +1,16 @@
+<h1>Actor - <%= @actor.name %> Detail</h1>
+
+<ul>
+    <li>ID: <%= @actor.id %></li>
+    <li>NAME: <%= @actor.name %></li>
+</ul>
+
+<h2>Films</h2>
+<ul>
+<% @actor.films.each do |film| %>
+    <li><%= film.name %></li>
+<% end %>
+    
+<%= link_to "Add Films", new_film_actor_path(@actor) %>
+
+<%= link_to "All Actors", actors_path %>
